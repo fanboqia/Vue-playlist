@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Ninja from './Ninja.vue'
+// import Ninja from './Ninja.vue'
 
-//注册ninja组建
-Vue.component('ninja',Ninja);
+// //global注册ninja
+// Vue.component('ninja',Ninja);
 
 
 new Vue({
