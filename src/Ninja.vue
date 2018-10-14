@@ -34,7 +34,7 @@ export default {
           this.ninja.pop();
       },
       changeTitle : function(){
-          this.title = 'changed Title...';
+          this.$emit('changeTitle','child to parent title change!');
       }
   }
 };

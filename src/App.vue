@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <ninja :ninja="ninja" :title="title"></ninja>
+    <ninja :ninja="ninja" :title="title" v-on:changeTitle="updateTitle($event)"></ninja>
     <ninja2 :ninja21="ninja2" :title="title"></ninja2>
   </div>
 </template>
@@ -30,6 +30,12 @@ export default {
         {name : 'frank',age: 22},
         {name : 'james',age: 23}
       ]
+    }
+  },
+
+  methods : {
+    updateTitle : function(titleNew){
+      this.title = titleNew;
     }
   }
 }
