@@ -1,7 +1,7 @@
 <template>
   <div>
-    {{ title }}
-    <ninja></ninja>
+    <h1>{{ title }}</h1>
+    <ninja :ninja="ninja" ></ninja>
   </div>
 </template>
 
@@ -18,12 +18,17 @@ export default {
 
   data () {
     return {
-      title: 'frank! Sick!'
+      ninja : [
+        {name : 'frank',age: 20},
+        {name : 'james',age: 21}
+      ]
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+h1{
+  color: green;
+}
 </style>
