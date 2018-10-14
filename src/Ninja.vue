@@ -11,6 +11,9 @@
 </template>
 
 <script>
+
+import { bus } from './main.js';
+
 export default {
 
   props:{
@@ -34,7 +37,9 @@ export default {
           this.ninja.pop();
       },
       changeTitle : function(){
-          this.$emit('changeTitle','child to parent title change!');
+        //   this.$emit('changeTitle','child to parent title change!');
+        this.title = 'changed Title!';
+        bus.$emit('changeTitle','changed Title!');
       }
   }
 };

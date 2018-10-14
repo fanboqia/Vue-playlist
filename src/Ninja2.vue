@@ -7,6 +7,9 @@
 </template>
 
 <script>
+
+import { bus } from './main.js';
+
 export default {
 
   props:{
@@ -22,6 +25,12 @@ export default {
   data() {
     return {
     };
+  },
+
+  created(){
+      bus.$on('changeTitle',(data)=>{
+          this.title = data;
+      });
   }
 };
 </script>

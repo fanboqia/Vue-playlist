@@ -5,6 +5,7 @@ import App from './App.vue'
 // //global注册ninja
 // Vue.component('ninja',Ninja);
 
+export const bus = new Vue();
 
 new Vue({
   el: '#app',
