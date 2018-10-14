@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <ninja :ninja="ninja" ></ninja>
+    <ninja :ninja="ninja" :title="title"></ninja>
+    <ninja2 :ninja21="ninja2" :title="title"></ninja2>
   </div>
 </template>
 
@@ -9,18 +10,25 @@
 
 //局部引用其他组件
 import Ninja from './Ninja.vue'
+import Ninja2 from './Ninja2.vue'
 
 export default {
 
   components:{
-    ninja:Ninja
+    ninja:Ninja,
+    ninja2: Ninja2
   },
 
   data () {
     return {
+      title : 'App',
       ninja : [
         {name : 'frank',age: 20},
         {name : 'james',age: 21}
+      ],
+      ninja2 : [
+        {name : 'frank',age: 22},
+        {name : 'james',age: 23}
       ]
     }
   }
